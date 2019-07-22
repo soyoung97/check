@@ -23,7 +23,10 @@ function get_line(latestStack, callback) {
       leftParen--;
     }
   }
-  var argNames = argPart.slice(startIdx + 1, endIdx).split(/\s*,\s*/);
+  var argNames = argPart
+    .slice(startIdx + 1, endIdx)
+    .split(/\s*,\s*/)
+    .map(x => x.trim());
 
   callback(null, line.split('\n')[0], argNames);
 }

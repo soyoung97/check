@@ -1,5 +1,5 @@
 const check = require('../src/type.js');
-const debugPrint = require('../src/print.js').debugPrint;
+const debugPrint = require('../src/debugPrint.js').debugPrint;
 
 function Func1(f) {}
 function Func2(f) {}
@@ -29,9 +29,18 @@ function testfunc() {
   var myVal1 = 1234;
   var myVal2 = 4567;
   var soyoung = 'Kawaii';
+  var soyoung2 = '기여어';
 
   console.log('I will test debugPrint function!');
-  debugPrint(myVal1, myVal2, Number(10), soyoung);
+  debugPrint(
+    myVal1,
+    myVal2,
+    Number(10),
+    Number(3.14),
+    { me: 'meme' },
+    soyoung,
+    soyoung2
+  );
   console.log('Done...?');
 }
 
