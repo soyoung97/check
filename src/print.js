@@ -50,16 +50,4 @@ function check(...args) {
   });
 }
 
-function testfunc() {
-  var myVal1 = 1234;
-  var myVal2 = 4567;
-  var soyoung = 777;
-
-  console.log('I will test check function!');
-  check(myVal1, myVal2, Number(10), soyoung);
-  console.log('Done...?');
-}
-
-testfunc();
-
 module.exports.debugPrint = check;
