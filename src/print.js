@@ -40,19 +40,14 @@ function check(...args) {
   Error.captureStackTrace(checkobj, check);
 
   latestStack = checkobj.stack[0];
-
+  let return_str = "";
   get_line(latestStack, function(err, line, argNames) {
-    console.log('========= The Amazing Library: Check.js =========');
-    //Question(soyoung): what if the requested line is not in one line? We
-    //should show all!
-    console.log(`Requested line: ${line.trim()}`);
 
     argNames.forEach((e, i) => {
-      console.log(`${e}: ${args[i]}`);
+      return_str.concat(`${e}: ${args[i]}`);
     });
-
-    console.log('=================================================');
   });
+  return return_str;
 }
 
-module.exports.debugPrint = check;
+module.exports.print = check;

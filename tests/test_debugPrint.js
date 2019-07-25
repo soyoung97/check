@@ -16,6 +16,12 @@ function testDebug() {
     str1,
     str2
   );
+  debugPrint("MYMY")
+  debugPrint(33 === 44)
+  debugPrint(11 === 11)
+  const sy = '11'
+  const ga = '11'
+  debugPrint(sy === ga) 
 }
 
 testDebug();

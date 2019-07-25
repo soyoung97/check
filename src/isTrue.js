@@ -42,17 +42,17 @@ function check(...args) {
   latestStack = checkobj.stack[0];
 
   get_line(latestStack, function(err, line, argNames) {
-    console.log('========= The Amazing Library: Check.js =========');
-    //Question(soyoung): what if the requested line is not in one line? We
-    //should show all!
-    console.log(`Requested line: ${line.trim()}`);
-
     argNames.forEach((e, i) => {
-      console.log(`${e}: ${args[i]}`);
-    });
-
-    console.log('=================================================');
-  });
+      if (typeOf(args[i]) !== 'boolean') {
+        console.log(args)
+        console.log(typeof(args))
+        throw new Error('Type of argument for isTrue function is not boolean')
+      }
+      if (!arg) {
+        console.log(`Check.isTrue failed for ${e}`);
+      }
+    })
+  })
 }
 
-module.exports.debugPrint = check;
+module.exports.isTrue = check;
