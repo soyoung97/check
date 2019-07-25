@@ -23,25 +23,5 @@ check.type(p, p1);
 check.type(str1, str2);
 check.type(str1, str2, str3);
 check.type(num1, num2);
-console.log('dhidhidh');
 
-function testfunc() {
-  var myVal1 = 1234;
-  var myVal2 = 4567;
-  var soyoung = 'Kawaii';
-  var soyoung2 = '기여어';
-
-  console.log('I will test debugPrint function!');
-  debugPrint(
-    myVal1,
-    myVal2,
-    Number(10),
-    Number(3.14),
-    { me: 'meme' },
-    soyoung,
-    soyoung2
-  );
-  console.log('Done...?');
-}
-
-testfunc();
+console.log("Testing for test_type END")
