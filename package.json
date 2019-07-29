@@ -1,0 +1,25 @@
+{
+  "name": "check",
+  "version": "1.0.0",
+  "description": "An amazing javascript checking library",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyoung97/check.git"
+  },
+  "keywords": [
+    "check"
+  ],
+  "author": "Recoprin, G40N",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soyoung97/check/issues"
+  },
+  "homepage": "https://github.com/soyoung97/check#readme"
+}
