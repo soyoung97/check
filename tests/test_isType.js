@@ -1,0 +1,31 @@
+const isBool = require('../src/isBool.js').isBool;
+const isNum = require('../src/isNum.js').isNum;
+const isObj = require('../src/isObj.js').isObj;
+const isStr = require('../src/isStr.js').isStr;
+const isNull = require('../src/isNull.js').isNull;
+const isFunc = require('../src/isFunc.js').isFunc;
+const isUndefined = require('../src/isUndefined').isUndefined;
+const isSymbol = require('../src/isSymbol').isSymbol;
+const isBigInt = require('../src/isBigInt').isBigInt;
+
+console.log("Testing for is{}.js");
+const str1 = 'str1';
+const str2 = 'str2';
+const str3 = 'str3';
+const num1 = 1;
+const num2 = 2;
+const obj = [1, 2, 3, '3jkjlkfda'];
+const symbol = Symbol();
+
+isBool(false);
+isBool(true);
+isNum(num1);
+isObj(obj);
+isObj(null, showNull = true);
+isObj(null);
+isStr(str1);
+isStr(str2);
+isNull(null);
+isFunc(() => {});
+isUndefined(undefined);
+isSymbol(symbol);

@@ -1,7 +1,7 @@
 //check if type of the variable is object
 module.exports = {
   isObj: function(arg, showNull=false) {
-    if (typeOf(arg) !== 'object'){
+    if (typeof(arg) !== 'object'){
       console.log(`check.isObj():\nvariable ${arg} type is ${typeof(arg)}, not Object`)
       return false
     }
