@@ -4,24 +4,97 @@ for logging and data checking.
 
 ## Table Of Contents
 - [Installation](#installation)
-- [Type Comparison](#Type Comparison)
-- [Value Replacement](#Value Replacement)
-- [Math](#math)
-- [Objects](#objects)
-- [Parsing](#parsing)
-- [Strings](#strings)
-- [Testing](#testing)
+- [Pretty Print](#Pretty_Print)
+- [Type Checking](#Type_Checking)
+- [Type Comparison](#Type_Comparison)
+- [Value Replacement](#Value_Replacement)
 
 
 
 ## Installation
 
+TODO(Gaon): how to do installation? + npm i ~~ 도 써줘야함
+
 ```html
 <script type="text/javascript" src="/path/to/check.js"></script>
 ```
 
+## Pretty_Print
 
-## Type Comparison
+
+**print**
+
+pretty-prints the `argument` we want to print.
+**print** also shows the **original name** of the value, along with the value of the `argument`.
+- it needs to be executed inside a function.
+```javascript
+const my_print = "%%%%%"
+check.print(my_print);
+
+========= The Amazing Library: Check.js =========
+Requested line: check.print(my_print);
+my_print: %%%%%
+=================================================
+
+```
+## Type_Checking
+
+**isSymbol**
+
+Returns true if argument is of type Symbol, and false otherwise.
+
+Show console.log() if showLog=true. (default = true)
+
+Console.logs only when false are returned.
+- `argument` is the value you wish to check the type.
+- The number of parameters are limited to 1.
+```javascript
+const isSame = check.isSymbol(argument, showLog=true);
+```
+Example Usage:
+
+```javascript
+const isSame = check.isSymbol(3); // isSame is false
+//console.log()
+//   check.isSymbol():
+//   variable 3 type is number, not symbol
+```
+**isBigInt**
+
+Returns true if argument is of type BigInt, and false otherwise.
+
+**isNull**
+
+Returns true if argument is of type Null, and false otherwise.
+
+**isNum**
+
+Returns true if argument is of type Num, and false otherwise.
+
+**isObj**
+
+Returns true if argument is of type Object, and false otherwise.
+
+- if `allowNull` is true, isObj(null) returns true. (default=true)
+
+
+**isStr**
+
+Returns true if argument is of type String, and false otherwise.
+
+**isUndefined**
+
+Returns true if argument is Undefined, and false otherwise.
+
+**isBool**
+
+Returns true if argument is of type Boolean, and false otherwise.
+
+**isFunc**
+
+Returns true if argument is of type Function, and false otherwise.
+
+## Type_Comparison
 
 **CompareType**
 
@@ -56,7 +129,7 @@ return check.compareTypeShow(“string1”, “string2”) // This will return t
 return check.compareTypeShow(“string1”, 1) // This will return false, along with the console.log results
 ```
 
-## Value Replacement
+## Value_Replacement
 
 when working with web services, 
 we use the api from the back-end server to retrieve data.
