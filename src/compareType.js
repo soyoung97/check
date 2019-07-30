@@ -2,14 +2,15 @@ module.exports = {
   compareTypeShow: function (...args) {
     let beforeType = getType(args[0]);
     let failed_msg = '';
+
     function getType(o) {
       if (o == null) {
         return o;
-      }
-      else {
+      } else {
         return o.constructor;
       }
     }
+
     args.some((arg, i) => {
         if (arg == null) { // arg is null or undefined
           if (beforeType !== arg) {
@@ -35,14 +36,15 @@ module.exports = {
   compareType: function (...args) {
     let beforeType = getType(args[0]);
     let failed = false;
+
     function getType(o) {
       if (o == null) {
         return o;
-      }
-      else {
+      } else {
         return o.constructor;
       }
     }
+
     args.some((arg) => {
         if (arg == null) { // arg is null or undefined
           if (beforeType !== arg) {
