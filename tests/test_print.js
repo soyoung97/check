@@ -24,5 +24,5 @@ function testPrint() {
   print(sy === ga)
 }
 
-testDebug();
+testPrint();
 // TODO: needs assertion

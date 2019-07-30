@@ -1,5 +1,5 @@
 const check = require('../src/type.js');
-const debugPrint = require('../src/debugPrint.js').debugPrint;
+const debugPrint = require('../src/print.js').print;
 
 function Func1(f) {}
 function Func2(f) {}
