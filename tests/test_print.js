@@ -22,6 +22,8 @@ function testPrint() {
   const sy = '11'
   const ga = '11'
   print(sy === ga)
+  const my_print = "%%%%"
+  print(my_print)
 }
 
 testPrint();
