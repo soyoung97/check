@@ -55,4 +55,4 @@ function check(...args) {
   });
 }
 
-module.exports.debugPrint = check;
+module.exports.print = check;
