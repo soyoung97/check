@@ -36,17 +36,18 @@ module.exports = {
     }
     return true
   },
-  isObj: function (arg, showNull = false) {
+  isObj: function (arg, showLog = true, allowNull = true) {
     if (typeof (arg) !== 'object') {
       if (showLog) {
         console.log(`check.isObj():\nvariable ${arg} type is ${typeof (arg)}, not Object`)
       }
       return false
     }
-    if (arg === null && showNull === true) {
+    if (arg === null) {
       if (showLog) {
         console.log(`check.isObj():\nvariable type is object, but it is null`)
       }
+      return allowNull
     }
     return true
   },
