@@ -5,7 +5,7 @@ for logging and data checking.
 
 ## Table Of Contents
 
-- [Installation](#installation)
+- [Setup](#Setup)
 - [Pretty Print](#Pretty_Print)
 - [Type Checking](#Type_Checking)
 - [Type Comparison](#Type_Comparison)
