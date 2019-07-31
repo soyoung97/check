@@ -24,6 +24,10 @@ npm run build
 ```
 
 - Options(Build by category):
+  - `type` option: supports `compareTypeShow, compareType, isSymbol, isBigInt, isNull, isObj, isStr, isUndefined, isBool, isFunc` functions
+  - `fill` option: supports `fill, fillNull, fillUndefined` functions
+  - `print` option: supports a `print` function
+  - `all` option: supports all functions in the library
 
 ```bash
 npm run build -- --env.opt=<all|type|fill|print>
