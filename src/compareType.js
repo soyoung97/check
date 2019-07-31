@@ -1,5 +1,5 @@
 module.exports = {
-  compareTypeShow: function (...args) {
+  compareTypeShow: function(...args) {
     let beforeType = getType(args[0]);
     let failed_msg = '';
 
@@ -12,19 +12,21 @@ module.exports = {
     }
 
     args.some((arg, i) => {
-        if (arg == null) { // arg is null or undefined
-          if (beforeType !== arg) {
-            failed_msg = `Type checking failed for ${i}th parameter. \n\n${beforeType}\n\n!==\n\nnull|undefined`
-            return false; // return true to break the some loop
-          }
-        } else {
-          if (arg.constructor !== beforeType) {
-            failed_msg = `Type checking failed for ${i}th parameter. \n\n${beforeType}\n\n!==\n\n${arg.constructor}`
-            return false;
-          }
+      if (arg == null) {
+        // arg is null or undefined
+        if (beforeType !== arg) {
+          failed_msg = `Type checking failed for ${i}th parameter. \n\n${beforeType}\n\n!==\n\nnull|undefined`;
+          return false; // return true to break the some loop
+        }
+      } else {
+        if (arg.constructor !== beforeType) {
+          failed_msg = `Type checking failed for ${i}th parameter. \n\n${beforeType}\n\n!==\n\n${
+            arg.constructor
+          }`;
+          return false;
         }
       }
-    );
+    });
     if (failed_msg !== '') {
       console.log(failed_msg);
       return false;
@@ -33,7 +35,7 @@ module.exports = {
       return true;
     }
   },
-  compareType: function (...args) {
+  compareType: function(...args) {
     let beforeType = getType(args[0]);
     let failed = false;
 
@@ -45,24 +47,24 @@ module.exports = {
       }
     }
 
-    args.some((arg) => {
-        if (arg == null) { // arg is null or undefined
-          if (beforeType !== arg) {
-            failed = true;
-            return failed; // return true to break the some loop
-          }
-        } else {
-          if (arg.constructor !== beforeType) {
-            failed = true;
-            return failed;
-          }
+    args.some(arg => {
+      if (arg == null) {
+        // arg is null or undefined
+        if (beforeType !== arg) {
+          failed = true;
+          return failed; // return true to break the some loop
+        }
+      } else {
+        if (arg.constructor !== beforeType) {
+          failed = true;
+          return failed;
         }
       }
-    );
+    });
     if (failed) {
       return false;
     } else {
       return true;
     }
   }
-}
+};

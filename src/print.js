@@ -9,7 +9,7 @@ function get_line(latestStack, callback) {
   }
 
   var line = lines.slice(+latestStack.getLineNumber() - 1).join('\n');
-  var argPart = line.slice(latestStack.getColumnNumber() - 1);
+  var argPart = line.slice(+latestStack.getColumnNumber() - 1);
 
   var startIdx = argPart.indexOf('(');
   var leftParen = 1;
@@ -42,16 +42,13 @@ function check(...args) {
   latestStack = checkobj.stack[0];
 
   get_line(latestStack, function(err, line, argNames) {
-    console.log('========= The Amazing Library: Check.js =========');
-    //Question(soyoung): what if the requested line is not in one line? We
-    //should show all!
-    console.log(`Requested line: ${line.trim()}`);
+    console.log(
+      `Requested line[${+latestStack.getLineNumber()}]: ${line.trim()}`
+    );
 
     argNames.forEach((e, i) => {
       console.log(`${e}: ${args[i]}`);
     });
-
-    console.log('=================================================');
   });
 }
 
