@@ -47,14 +47,13 @@ pretty-prints the `argument` we want to print.
 - it needs to be executed inside a function.
 
 ```javascript
-const my_print = "%%%%%"
+const my_print = '%%%%%';
 check.print(my_print);
+```
 
-========= The Amazing Library: Check.js =========
-Requested line: check.print(my_print);
+```bash
+Requested line[2]: check.print(my_print);
 my_print: %%%%%
-=================================================
-
 ```
 
 ## Type_Checking
