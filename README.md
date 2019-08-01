@@ -185,7 +185,7 @@ This function will look **deep** into all keys in dictionaries until it replaces
   if it is set to `false`, the function will not produce any console.log() results.
 
 ```javascript
-const replaced_dict = check.fill(object, toFill, (showLog = true));
+const replaced_dict = check.fillNull(object, toFill, (showLog = true));
 ```
 
 Example Usage:
@@ -210,7 +210,7 @@ This function will look **deep** into all keys in dictionaries until it replaces
   if it is set to `false`, the function will not produce any console.log() results.
 
 ```javascript
-const replaced_dict = check.fill(object, toFill, (showLog = true));
+const replaced_dict = check.fillUndefined(object, toFill, (showLog = true));
 ```
 
 Example Usage:
